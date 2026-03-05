@@ -15,7 +15,7 @@ function describeRoom(string) {
         default:
             console.log("It would appear you have entered an invalid room.");
     }
-}
+};
 
 const exampleNode = {
     image: './images/enter.jpg',
@@ -23,22 +23,26 @@ const exampleNode = {
     choices: ["Nah. I'm going to dip. Also, I'm a wimp.", "Heck yeah! Nothing ever bad happens in abandoned places! Let's go investiage!"]
 };
 
-const storyNodes = [
-    [
-        './images/enter.jpg', 
-        'You have discovered an abandoned base underwater! Will you investigate it?', 
-        ["Nah. I'm gonna dip. Also, I'm a wimp.", "Heck yeah! Nothing ever bad happens in abandoned places! Let's go investiage!"]
-    ],
+const entrance = {
+    image: './images/enter.jpg', 
+    text: "You are at the front of an abandoned base. It's kinda... calling to you. Your curiosity tugs at you to explore. Do you?", 
+    choices: ["Nah. I'm gonna dip. Also, I'm a wimp.", "Heck yeah! Nothing ever bad happens in abandoned places! Let's go investiage!"]
+};
 
-    [
-        './images/starfish-table.jpg',
-        'You enter... you spot a starfish on the table, along with a tablet. Do you watch the video on the tablet?',
-        ["Yeah? Why wouldn't I?", "Nah. My mom said my screentime is too high anyways."]
-    ],
-        
-    [
-        './images/locker.jpg',
-        'You spot a locker. Inside is a tablet.',
+const starfishTable = {
+    image: './images/starfish-table.jpg',
+    text: 'You enter... you spot a starfish on the table, along with a tablet. Do you watch the video on the tablet?',
+    choices: ["Yeah? Why wouldn't I?", "Nah. My mom said my screentime is too high anyways."]
+};
+
+const locker = {
+    image: './images/locker.jpg',
+    text: "You spot a locker. Inside is a tablet. You watch the video. It shows security footage of what happened to the previous subnauts who lived here. They were attacked. And you're now sure if the monster is gone yet. How do you escape?",
+    choices: ["Through the back. Haven't been there yet, so it can't track me.", "Through the front. It'll never expect it."]
+};
+
+const storyNodes = [
+    entrance, starfishTable, locker, 
         
     ]
           'You leave the base.'
