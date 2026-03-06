@@ -41,13 +41,21 @@ const locker = {
     choices: ["Through the back. Haven't been there yet, so it can't track me.", "Through the front. It'll never expect it."]
 };
 
-const storyNodes = [
-    entrance, starfishTable, locker, 
-        
-    ]
-          'You leave the base.'
-];
+const backyard = {
+    image: './images/exit.jpg',
+    text: 'You are now in the backyard of the house. Yet, the house still seems to call to you. What do you do?',
+    choices: ['Back to the front. I am NOT going in that place', 'Maybe I should go in. What could possibly go wrong?']
+};
+
+const storyNodes = [entrance, starfishTable, locker, backyard];
+
+const img = document.getElementById('img');
+const par = document.getElementById('par');
+const choicesContainer = document.getElementById("choices-container");
 
 function displayNode(indexNum) {
+    img.src = storyNodes[indexNum].image;
+    par.innerHTML = '<p>' + storyNodes[indexNum].text + '</p>';
+    choicesContainer.innerHTML = '<div><button>' + storyNodes[indexNum].choices[0] + '</button> <button>' + storyNodes[indexNum].choices[1] + '</button></div>';
+};
 
-}
